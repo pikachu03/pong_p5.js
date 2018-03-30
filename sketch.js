@@ -48,7 +48,7 @@ function draw() {
 		players.move();
 		players.showScore();
 		textSize(10);
-    text(" Developed by: \n Amitav Nott", width-80, height-20);
+    	text(" Developed by: \n Amitav Nott", width-80, height-20);
 	}
 	if (players.score1 === 20) {
 		gameOver = true;
