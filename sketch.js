@@ -1,3 +1,5 @@
+//Developed by Amitav Nott. All rights reserverd.
+
 var players;
 var ball;
 var cnv;
