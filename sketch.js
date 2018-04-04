@@ -1,3 +1,5 @@
+//Developed by Amitav Nott. All rights reserverd.
+
 var players;
 var ball;
 var cnv;
@@ -28,7 +30,15 @@ function draw() {
 
 	stroke(255);
 	strokeWeight(3);
-	line(width/2, 0, width/2, height);
+	//line(width/2, 0, width/2, height);
+
+	var length = 10;
+	var lineY = 0;
+	for (var i = 0; i < height/length; i++) {
+		line(width/2, lineY, width/2, lineY + length);
+		lineY += length * 3;
+	}
+
 	noStroke();
 	fill(r, g, b);
 
@@ -48,7 +58,7 @@ function draw() {
 		players.move();
 		players.showScore();
 		textSize(10);
-    text(" Developed by: \n Amitav Nott", width-80, height-20);
+    	text(" Developed by: \n Amitav Nott", width-80, height-20);
 	}
 	if (players.score1 === 20) {
 		gameOver = true;
