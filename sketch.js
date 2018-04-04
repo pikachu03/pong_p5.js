@@ -30,7 +30,15 @@ function draw() {
 
 	stroke(255);
 	strokeWeight(3);
-	line(width/2, 0, width/2, height);
+	//line(width/2, 0, width/2, height);
+
+	var length = 10;
+	var lineY = 0;
+	for (var i = 0; i < height/length; i++) {
+		line(width/2, lineY, width/2, lineY + length);
+		lineY += length * 3;
+	}
+
 	noStroke();
 	fill(r, g, b);
 
